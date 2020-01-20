@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="AppClima.View.MainPage"
+             BackgroundImage="background.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout BackgroundColor="WhiteSmoke" Padding="10">
+                <Label x:Name="lblCidade" FontSize="Title"  HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="FillAndExpand"></Label>
+                <Label x:Name="lblEstadoTemperatura" FontSize="Subtitle"  HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="FillAndExpand"></Label>
+
+                <Image x:Name="imgIconeClima" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand"></Image>
+                <Label x:Name="lblTemperatura" Font="35"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                <Label x:Name="lblSensacao" Font="15" TextColor="Red" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="End"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

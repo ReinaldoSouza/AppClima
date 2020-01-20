@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImage="background.jpg"
+             x:Class="AppClima.View.SemanaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="WhiteSmoke" Margin="10" Padding="3">
+                <Label Text="Temperatura para a próxima semana:"  x:Name="lblCabecalho" FontSize="Title"  HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                <Label x:Name="lblSumario" FontSize="Title"  HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="FillAndExpand"></Label>
+            </StackLayout>
+            <ScrollView BackgroundColor="Transparent">
+                <StackLayout BackgroundColor="Transparent" Padding="10">
+
+                    <ListView Margin="10" BackgroundColor="WhiteSmoke" HasUnevenRows="True" ItemsSource="{Binding .}" SeparatorVisibility="None" x:Name="_list" HorizontalOptions="FillAndExpand">
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+                                <ViewCell >
+                                    <ViewCell.View>
+                                        <Frame Margin="1">
+                                            <Grid>
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Vertical">
+                                                        <Label x:Name="lblSumario" Text="{Binding summary}" FontSize="15" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"
+                                                   TextColor="Black"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label x:Name="lblHora" Text="{Binding diaSemana}" FontSize="13" FontAttributes="Bold"
+                                                   TextColor="Black" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                                        <Image Source="{Binding icon}" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                                        <Label x:Name="lblPorcentagem" Text="{Binding precipProbability}" FontSize="13" FontAttributes="Bold"
+                                                   TextColor="Blue" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Vertical">
+                                                        <Label x:Name="lblMinima" Text="{Binding temperatureLow}" FontSize="15" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+                                                   TextColor="Black"/>
+                                                        <Label x:Name="lblMaxima" Text="{Binding temperatureHigh}" FontSize="15" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+                                                   TextColor="Black"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+
+                                            </Grid>
+                                        </Frame>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="AppClima.View.LoadingPage"
+             CloseWhenBackgroundIsClicked="False">
+    <Frame CornerRadius="70" Padding="8" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent">
+        <StackLayout Spacing="0" Orientation="Vertical" Padding="10">
+
+            <ActivityIndicator  Color="White"
+                                IsRunning="True"
+                                IsEnabled="True"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                HeightRequest="70"
+                                WidthRequest="70"/>
+
+            <Frame BackgroundColor="#C0C0C0" Padding="5" CornerRadius="5">
+                <Label Text="Obtendo sua localização..."  FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+
+        </StackLayout>
+
+    </Frame>
+
+</pages:PopupPage>
